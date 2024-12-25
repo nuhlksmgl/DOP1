@@ -7,31 +7,28 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private bool facingRight = true;
 
-    [Header("Dash Settings")]
-    [SerializeField] private float dashSpeed = 20f;      // Dash sýrasýnda hýz
-    [SerializeField] private float dashDuration = 0.2f;  // Dash süresi
-    [SerializeField] private float dashCooldown = 1f;    // Dash sonrasý bekleme süresi
+    [Header("Ladder Settings")]
+    [SerializeField] private float climbSpeed = 8f;
 
-    private bool isDashing = false;                     // Dash sýrasýnda olup olmadýðýný takip
-    private bool canDash = true;                        // Dash yapmaya uygunluk
-    private float dashTime;                             // Aktif dash süresini takip
-
-    [Header("Components")]
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
-    // Movement variables
+    private bool isDashing = false;
+    private bool canDash = true;
+    private bool isLadder = false;
+    private bool isClimbing = false;
+
     private float horizontalInput;
-    private Vector2 currentVelocity;
+    private float verticalInput;
 
     private void Awake()
     {
-        // Get required components
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponentInChildren<Animator>();
 
-        // Configure Rigidbody2D for 2D movement
-        rb.gravityScale = 0;
+        rb.gravityScale = 4f;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
@@ -39,10 +36,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isDashing)
         {
-            // Get horizontal input (-1 to 1)
             horizontalInput = Input.GetAxisRaw("Horizontal");
+            verticalInput = Input.GetAxisRaw("Vertical");
 
-            // Handle sprite flipping based on movement direction
             if (horizontalInput != 0)
             {
                 bool shouldFaceRight = horizontalInput > 0;
@@ -51,56 +47,62 @@ public class PlayerMovement : MonoBehaviour
                     Flip();
                 }
             }
-        }
 
-        // Dash giriþini kontrol et (Shift tuþu ile)
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && horizontalInput != 0)
-        {
-            StartDash();
+            if (isLadder && Mathf.Abs(verticalInput) > 0f)
+            {
+                isClimbing = true;
+                animator.SetBool("ladderClimb", true); // Týrmanma animasyonunu tetikle
+                Debug.Log("Týrmanma animasyonu baþlatýldý.");
+            }
+            else if (!isLadder || Mathf.Abs(verticalInput) == 0f)
+            {
+                isClimbing = false;
+                animator.SetBool("ladderClimb", false); // Yürüyüþ animasyonuna geç
+                Debug.Log("Týrmanma animasyonu durduruldu.");
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        if (isDashing) return; // Dash sýrasýnda hareket iþlemi devre dýþý
+        if (isDashing) return;
 
-        // Calculate movement velocity
-        currentVelocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
-
-        // Apply movement
-        rb.velocity = currentVelocity;
-    }
-
-    private void StartDash()
-    {
-        isDashing = true;
-        canDash = false;
-        dashTime = dashDuration;
-
-        // Dash yönünü ayarla
-        rb.velocity = new Vector2(horizontalInput * dashSpeed, 0f);
-
-        // Dash bitiþini gecikmeli tetikle
-        Invoke(nameof(EndDash), dashDuration);
-    }
-
-    private void EndDash()
-    {
-        isDashing = false;
-
-        // Dash'i bekleme süresi sonunda tekrar etkinleþtir
-        Invoke(nameof(ResetDash), dashCooldown);
-    }
-
-    private void ResetDash()
-    {
-        canDash = true;
+        if (isClimbing)
+        {
+            rb.gravityScale = 0f;
+            rb.velocity = new Vector2(rb.velocity.x, verticalInput * climbSpeed);
+        }
+        else
+        {
+            rb.gravityScale = 4f;
+            rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+        }
     }
 
     private void Flip()
     {
-        // Flip the character's facing direction
         facingRight = !facingRight;
         spriteRenderer.flipX = !facingRight;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            isLadder = true;
+            animator.SetBool("ladderClimb", true); // Merdivene dokununca týrmanma animasyonunu tetikle
+            Debug.Log("Merdivene dokunuldu ve týrmanma animasyonu tetiklendi.");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            isLadder = false;
+            isClimbing = false;
+            animator.SetBool("ladderClimb", false); // Merdivenden çýkarken animasyonu durdur
+            Debug.Log("Merdivenden çýkýldý ve týrmanma animasyonu durduruldu.");
+        }
     }
 }
