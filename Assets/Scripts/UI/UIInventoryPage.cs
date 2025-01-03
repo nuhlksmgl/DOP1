@@ -3,32 +3,68 @@ using UnityEngine;
 
 public class UIInventoryPage : MonoBehaviour
 {
-    [SerializeField] private UIInventoryItem itemPrefab; // Fixed typo
+    [SerializeField] private UIInventoryItem itemPrefab;
     [SerializeField] private RectTransform contentPanel;
 
     private List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem>();
-
-    // Initializes the inventory UI with a specified size
+    
+    /// <param name="inventorySize">Envanterdeki slot sayısı</param>
     public void InitializeInventoryUI(int inventorySize)
     {
         for (int i = 0; i < inventorySize; i++)
         {
-            // Instantiate the UI item and add it to the content panel
-            UIInventoryItem uiItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
-            uiItem.transform.SetParent(contentPanel, false); // `false` keeps local scaling
+            // Prefab oluşturulur ve içerik paneline eklenir.
+            UIInventoryItem uiItem = Instantiate(itemPrefab, contentPanel);
             listOfUIItems.Add(uiItem);
+
+            // Olaylara abonelik
+            uiItem.OnItemClicked += HandleItemSelection;
+            uiItem.OnItemBeginDrag += HandleBeginDrag;
+            uiItem.OnItemDroppedOn += HandleSwap;
+            uiItem.OnItemEndDrag += HandleEndDrag;
+            uiItem.OnRightMouseBtnClick += HandleShowItemActions;
         }
     }
-
-    // Shows the inventory UI
-    public void Show()
+    
+    private void HandleBeginDrag(UIInventoryItem item)
     {
-        gameObject.SetActive(true); // Corrected to activate the UI
+        Debug.Log($"Begin Drag: {item.name}");
     }
 
-    // Hides the inventory UI
+  
+    private void HandleSwap(UIInventoryItem item)
+    {
+        Debug.Log($"Item Dropped On: {item.name}");
+    }
+
+  
+    private void HandleEndDrag(UIInventoryItem item)
+    {
+        Debug.Log($"End Drag: {item.name}");
+    }
+
+  
+    private void HandleShowItemActions(UIInventoryItem item)
+    {
+        Debug.Log($"Right Clicked: {item.name}");
+    }
+
+  
+    private void HandleItemSelection(UIInventoryItem item)
+    {
+        Debug.Log($"Item Selected: {item.name}");
+        Debug.Log("geliyor");
+    }
+
+
+    public void Show()
+    {
+        gameObject.SetActive(true);
+    }
+
+   
     public void Hide()
     {
-        gameObject.SetActive(false); // Hides the UI
+        gameObject.SetActive(false);
     }
 }
