@@ -7,6 +7,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private bool facingRight = true;
 
+    [Header("Dash Settings")]
+    [SerializeField] private float dashSpeed = 20f;
+    [SerializeField] private float dashDuration = 0.2f;
+    [SerializeField] private float dashCooldown = 1f;
+
     [Header("Ladder Settings")]
     [SerializeField] private float climbSpeed = 8f;
 
@@ -21,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontalInput;
     private float verticalInput;
+    private float dashTime;
 
     private void Awake()
     {
@@ -57,9 +63,22 @@ public class PlayerMovement : MonoBehaviour
             else if (!isLadder || Mathf.Abs(verticalInput) == 0f)
             {
                 isClimbing = false;
-                animator.SetBool("ladderClimb", false); // Yürüyüþ animasyonuna geç
+                animator.SetBool("ladderClimb", false); // Týrmanma animasyonunu durdur
                 Debug.Log("Týrmanma animasyonu durduruldu.");
             }
+
+            // Yürüyüþ animasyonunu tetikleme
+            if (!isClimbing)
+            {
+                animator.SetBool("isWalking", horizontalInput != 0);
+                Debug.Log("Yürüyüþ animasyonu tetiklendi.");
+            }
+        }
+
+        // Dash mekanizmasýný kontrol et
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && horizontalInput != 0 && !isClimbing)
+        {
+            StartDash();
         }
     }
 
@@ -79,6 +98,34 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void StartDash()
+    {
+        isDashing = true;
+        canDash = false;
+        dashTime = dashDuration;
+
+        rb.velocity = new Vector2(horizontalInput * dashSpeed, 0f);
+
+        animator.SetBool("isDashing", true); // Dash animasyonunu tetikleme
+        Debug.Log("Dash animasyonu baþlatýldý.");
+
+        Invoke(nameof(EndDash), dashDuration);
+    }
+
+    private void EndDash()
+    {
+        isDashing = false;
+        animator.SetBool("isDashing", false); // Dash animasyonunu durdurma
+        Debug.Log("Dash animasyonu durduruldu.");
+
+        Invoke(nameof(ResetDashCooldown), dashCooldown);
+    }
+
+    private void ResetDashCooldown()
+    {
+        canDash = true;
+    }
+
     private void Flip()
     {
         facingRight = !facingRight;
@@ -90,8 +137,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("Ladder"))
         {
             isLadder = true;
-            animator.SetBool("ladderClimb", true); // Merdivene dokununca týrmanma animasyonunu tetikle
-            Debug.Log("Merdivene dokunuldu ve týrmanma animasyonu tetiklendi.");
+            Debug.Log("Merdivene dokunuldu.");
         }
     }
 
@@ -102,7 +148,11 @@ public class PlayerMovement : MonoBehaviour
             isLadder = false;
             isClimbing = false;
             animator.SetBool("ladderClimb", false); // Merdivenden çýkarken animasyonu durdur
-            Debug.Log("Merdivenden çýkýldý ve týrmanma animasyonu durduruldu.");
+            Debug.Log("Merdivenden çýkýldý.");
+
+            // Yürüyüþ animasyonunu tetikleme
+            animator.SetBool("isWalking", horizontalInput != 0);
+            Debug.Log("Yürüyüþ animasyonu tetiklendi.");
         }
     }
 }
