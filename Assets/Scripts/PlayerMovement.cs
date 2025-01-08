@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float crouchSpeed = 2f;
     [SerializeField] private bool facingRight = true;
 
     [Header("Dash Settings")]
@@ -23,10 +24,12 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash = true;
     private bool isLadder = false;
     private bool isClimbing = false;
+    private bool isCrouching = false;
 
     private float horizontalInput;
     private float verticalInput;
     private float dashTime;
+    private float currentSpeed;
 
     private void Awake()
     {
@@ -36,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
 
         rb.gravityScale = 4f;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        currentSpeed = moveSpeed;
     }
 
     private void Update()
@@ -68,10 +73,28 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // Yürüyüþ animasyonunu tetikleme
-            if (!isClimbing)
+            if (!isClimbing && !isCrouching)
             {
                 animator.SetBool("isWalking", horizontalInput != 0);
                 Debug.Log("Yürüyüþ animasyonu tetiklendi.");
+            }
+
+            // Saklanma mekaniði kontrolü
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                StartCrouch();
+            }
+
+            if (Input.GetKeyUp(KeyCode.C))
+            {
+                EndCrouch();
+            }
+
+            // Idle animasyonunu tetikleme
+            animator.SetBool("isIdle", horizontalInput == 0 && verticalInput == 0 && !isClimbing && !isDashing && !isCrouching);
+            if (horizontalInput == 0 && verticalInput == 0 && !isClimbing && !isDashing && !isCrouching)
+            {
+                Debug.Log("Idle animasyonu tetiklendi.");
             }
         }
 
@@ -94,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             rb.gravityScale = 4f;
-            rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+            rb.velocity = new Vector2(horizontalInput * currentSpeed, rb.velocity.y);
         }
     }
 
@@ -124,6 +147,22 @@ public class PlayerMovement : MonoBehaviour
     private void ResetDashCooldown()
     {
         canDash = true;
+    }
+
+    private void StartCrouch()
+    {
+        isCrouching = true;
+        currentSpeed = crouchSpeed;
+        animator.SetBool("isCrouching", true); // Eðilme animasyonunu tetikleme
+        Debug.Log("Eðilme animasyonu baþlatýldý.");
+    }
+
+    private void EndCrouch()
+    {
+        isCrouching = false;
+        currentSpeed = moveSpeed;
+        animator.SetBool("isCrouching", false); // Eðilme animasyonunu durdurma
+        Debug.Log("Eðilme animasyonu durduruldu.");
     }
 
     private void Flip()
