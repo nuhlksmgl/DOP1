@@ -5,15 +5,20 @@ public class LadderMovement : MonoBehaviour
     [Header("Ladder Settings")]
     [SerializeField] private float climbSpeed = 8f;
 
+    [Header("Ground Settings")]
+    [SerializeField] private Collider2D groundCollider;
+
     private Rigidbody2D rb;
     private Animator animator;
     private bool isLadder = false;
     private bool isClimbing = false;
+    private float originalGravity;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        originalGravity = rb.gravityScale;
 
         if (animator == null)
         {
@@ -39,8 +44,26 @@ public class LadderMovement : MonoBehaviour
             isClimbing = false;
             if (animator != null)
             {
-                animator.SetBool("ladderClimb", false); // Yürüyüþ animasyonuna geç
+                animator.SetBool("ladderClimb", false); // Týrmanma animasyonunu durdur
                 Debug.Log("Týrmanma animasyonu durduruldu.");
+            }
+        }
+
+        // `S` tuþuna basýldýðýnda ground collider'ý trigger olarak iþaretle
+        if (isLadder && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W)))
+        {
+            if (groundCollider != null)
+            {
+                groundCollider.isTrigger = true;
+                Debug.Log("Ground collider trigger olarak iþaretlendi.");
+            }
+        }
+        else if (!isLadder)
+        {
+            if (groundCollider != null)
+            {
+                groundCollider.isTrigger = false;
+                Debug.Log("Ground collider normal hale getirildi.");
             }
         }
     }
@@ -54,7 +77,7 @@ public class LadderMovement : MonoBehaviour
         }
         else
         {
-            rb.gravityScale = 4f;
+            rb.gravityScale = originalGravity;
         }
     }
 
@@ -72,6 +95,7 @@ public class LadderMovement : MonoBehaviour
         {
             isLadder = false;
             isClimbing = false;
+            rb.gravityScale = originalGravity;
             if (animator != null)
             {
                 animator.SetBool("ladderClimb", false); // Merdivenden çýkýnca animasyonu durdur
