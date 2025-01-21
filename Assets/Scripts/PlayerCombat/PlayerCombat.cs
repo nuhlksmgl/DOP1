@@ -4,9 +4,11 @@ using System.Collections;
 public class PlayerCombat : MonoBehaviour
 {
     [Header("Combat Settings")]
-    [SerializeField] private float attackRange = 1f;
-    [SerializeField] private int attackDamage = 10;
-    [SerializeField] private LayerMask enemyLayers;
+    public float attackRange = 1f;
+    public int attackDamage = 10;
+    public string enemyTag = "Enemy"; // Düþmanlarýn tag'ý
+    public float knockbackForce = 5f;
+    public Transform attackPoint; // Saldýrý noktasýnýn referansý
 
     private Animator animator;
 
@@ -17,7 +19,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Sol mouse butonuna basýldýðýnda saldýrý
+        if (Input.GetMouseButtonDown(0))
         {
             Attack();
         }
@@ -25,35 +27,43 @@ public class PlayerCombat : MonoBehaviour
 
     private void Attack()
     {
-        // Saldýrý animasyonunu tetikleme
-        animator.SetBool("isAttacking", true);
+        animator.SetBool("BedeviMeleeCombat", true);
+        animator.SetBool("BedeviWalking", false);
 
-        // Saldýrý alanýný belirleme
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
 
-        // Düþmanlara zarar verme
         foreach (Collider2D enemy in hitEnemies)
         {
-            if (enemy.CompareTag("enemy")) // Sadece 'enemy' tag'ine sahip objeleri hedef al
+            if (enemy.CompareTag(enemyTag))
             {
-                enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+                enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+                Knockback(enemy.transform);
             }
         }
 
-        // Saldýrý animasyonunu durdurma
         StartCoroutine(ResetAttack());
+    }
+
+    private void Knockback(Transform enemy)
+    {
+        Vector2 knockbackDirection = enemy.position - transform.position;
+        knockbackDirection.Normalize();
+        enemy.GetComponent<Rigidbody2D>().AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
     }
 
     private IEnumerator ResetAttack()
     {
-        yield return new WaitForSeconds(0.5f); // Saldýrý animasyonunun süresine göre ayarlayýn
-        animator.SetBool("isAttacking", false);
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("BedeviMeleeCombat", false);
+        animator.SetBool("BedeviWalking", true);
     }
 
-    // Saldýrý alanýný görselleþtirmek için
     private void OnDrawGizmosSelected()
     {
+        if (attackPoint == null)
+            return;
+
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
