@@ -1,0 +1,2261 @@
+fileFormatVersion: 2
+guid: 73b40ef080ee6294ca628783d6ce491d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bedevi (1)_0
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 927
+        width: 51
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301ec1de2fd3300428f7b5fe1e3ea0e3
+      internalID: 1761755990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_1
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 927
+        width: 59
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750c37d3c1ce0db49ba841193e1600a2
+      internalID: 387195625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_2
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 929
+        width: 54
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e122a1bc4061d4bad504473cb7e872
+      internalID: -2068204349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_3
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 929
+        width: 51
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49dcbb957a2b5c4182a7901a1a61707
+      internalID: -1140067181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_4
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 927
+        width: 53
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c48c01d65cad534e9eb7d4ad09f309c
+      internalID: 69572424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_5
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 927
+        width: 59
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5283bbd2c25b92d46b2a776c93660a12
+      internalID: -523089686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_6
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 927
+        width: 50
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88efdde5fb929a34080ddcf2042a6dcb
+      internalID: 421174959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 927
+        width: 50
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39afa3639b651ff41bfab83c7d57fea0
+      internalID: -802722868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 927
+        width: 51
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826c2871c10443b4880ba2476c67ed0f
+      internalID: -1445683494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1002
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1618e795a5585da4a8c8761d668b369a
+      internalID: -1369926101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 1002
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca889c2352302cd40bd4fa37890b26f6
+      internalID: 821036649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 1002
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2f8123f6aeeb64e9edb12fd5b36a4e
+      internalID: 1692832579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_12
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 1002
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278dca91fdfcee9489ac52088038c0c6
+      internalID: -1372067331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_13
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 961
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79d8f86c9fa49d4cb9fa85506e9c494
+      internalID: -1157845290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_14
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 960
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54293d9cc81f7344b0430562ed4b400
+      internalID: -1231625944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_15
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 961
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94cca3a3398bcea41b9d374f36304f8a
+      internalID: -2048554064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_16
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 960
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5179bf7a1b8fca34ab84d7488259a6ad
+      internalID: -702595718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_17
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 961
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03be1a84f50b2ba44ab2e96b2cac9e54
+      internalID: -2130688295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_18
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 961
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3152808d687d39347931581814abe263
+      internalID: -773899165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_19
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 730
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2563655c3acaf734d90dea6fd82f2a09
+      internalID: -1073142203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_20
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 730
+        width: 94
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c4ee453d7372e4fb4e268bab0dc98f
+      internalID: -447137662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_21
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 732
+        width: 99
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a285bb59a33424f892fdcace58746c
+      internalID: -509413571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_22
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 732
+        width: 94
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21f0650a7867a04baf48fc10da16f26
+      internalID: -1817022622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_23
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 730
+        width: 88
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2a2bd9b95dfd049960d3c6d287de0d
+      internalID: -2073997012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_24
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 730
+        width: 89
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507d5f500516007458f4500c97b6d0a4
+      internalID: -1342199039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_25
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 730
+        width: 95
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461f90c8e8a5ce2489609480be8db32b
+      internalID: 1242558505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_26
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 730
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8dfe33acee3124484d185d92ae984e
+      internalID: -56098533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_27
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 730
+        width: 95
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4878b8e8f1431c7409039df18684a050
+      internalID: -196652965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_28
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 796
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831968f7b0e3d74479aaeca992983ab0
+      internalID: -1456241911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_29
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 796
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b2876339911a04f84b3e1bb1367eef
+      internalID: -1166680171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_30
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 796
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8928866b586be2f4d90fe34dd89b925f
+      internalID: 1413938873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_31
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 796
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5176c3719e1b24caaf648e078784da
+      internalID: 662278098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_32
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 755
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 194e522fb9d951f46bc5e2140ffcfd59
+      internalID: 1226244136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_33
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 755
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f40ddadcb959496478e82cc6094a1e84
+      internalID: -391036253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_34
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 755
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35c6441dd814ff439621a07fe588fd3
+      internalID: -1787845164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_35
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 755
+        width: 71
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8cb7ea8571b854ea296f76465fc1e5
+      internalID: -386365709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_36
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 755
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674549751bdb1fb4d8f884b9b16c547d
+      internalID: 1499505069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_37
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 754
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf671cbfe3f42f7408daac5f10ad633c
+      internalID: -769625533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_38
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 755
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14f62e4f3abd2846ad9a6fcf35f65be
+      internalID: -2120558153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_39
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 754
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4daa8056639bd824aa81107cc4e76482
+      internalID: 287401772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_40
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 755
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf59186ad5f92a4d88d99148e7381b8
+      internalID: -45884657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_41
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 755
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe985906bcdccb24bbda63dd472cbe34
+      internalID: -2094609245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_42
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 540
+        width: 74
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5946cd9eb55474cb1ba271d2c73b57
+      internalID: -1558829934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_43
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 540
+        width: 72
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97fd58293398aa047a897c601f1361bc
+      internalID: -2021243244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_44
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 540
+        width: 53
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1a7a9b4ee81df4fae5b1e78a06c186
+      internalID: -1332929769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_45
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 540
+        width: 80
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49453dde50606894982905e7101293b3
+      internalID: 253956277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_46
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 540
+        width: 93
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7850a5d9c1780a94982fd82c07fb7f76
+      internalID: -463490022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_47
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 540
+        width: 82
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d8be9392394924f8ddce0673ead35a
+      internalID: -758833082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_48
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 606
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0b3c6e46c3bc9438c51bfc0e38f4cb
+      internalID: 139101392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_49
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 606
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30acd505c32f53a4d9d39819505f2f40
+      internalID: -1488964385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_50
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 606
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172c80e35fd372d418c18dac0fc2d30c
+      internalID: -1054689051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_51
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 606
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf9cafad6b522745a60dfc4c9560dfa
+      internalID: -1373805374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_52
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 565
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3323ce912a147ff45a90d48f87ad1cb0
+      internalID: -505250180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_53
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 565
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3db63ea4b5dae4ea38f6e12a5010a8
+      internalID: 169387119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_54
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 565
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be921048bec273d45896924ed344da92
+      internalID: 1682723776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_55
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 565
+        width: 10
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d7df64baf62ea40bfde5978a2cd1e4
+      internalID: -1306109210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_56
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 565
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1208990487fd9447806aa517b51bd0a
+      internalID: -287284302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_57
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 565
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8b44dc19f479247a70459b5982e9f8
+      internalID: 233517645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_58
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 564
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b54dd644c449548a2140dc93102e34
+      internalID: 648178329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_59
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 565
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee3c4579133b004184f03a530ca833d
+      internalID: -1339281629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_60
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 564
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4e71ea9407ced4b988c8caad3e2c86
+      internalID: 1845841067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_61
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 552
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e140adb044afc0746b731b7469ba2d68
+      internalID: -1362725398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_62
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 339
+        width: 102
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed62534fe2cd40489789222c068164a
+      internalID: -240401100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_63
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 339
+        width: 82
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aed1dd3e8cd91449bc7d58e61689bf5
+      internalID: -57114311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_64
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 339
+        width: 86
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b5683731d941543a848e8f68bf1b2a
+      internalID: 825122019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_65
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 334
+        width: 81
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f140430f5ec5b4aa5fa08ed51e3db9
+      internalID: -118749500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_66
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 339
+        width: 91
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 011c6d084b18f7b4faea1a4d6edbc348
+      internalID: -768961767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_67
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 339
+        width: 101
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742bed1264cde9740a7600ca49dfe7ed
+      internalID: 1265166801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_68
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 339
+        width: 97
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee895b7e85c63e044880ad20738258ff
+      internalID: 372295165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_69
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 339
+        width: 94
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1543979d5faa1ca48a1365c22e21c307
+      internalID: 1766849154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_70
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 391
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5449c6dd50e72004b9f090c59b9d03ad
+      internalID: -785001766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_71
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 392
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7adf0c7e439b5774a95bd87ec1578d51
+      internalID: -182659495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_72
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 392
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26839391b77bc6f4b86886d200584557
+      internalID: 694999246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_73
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 392
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d9fd65a45b3314198b621fbc82171b
+      internalID: -2131880072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_74
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 391
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7433c84fc41af44bf32e6e2eb3e428
+      internalID: 1079175619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_75
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 392
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78bab9b6b8a6e8b43b3ce6d9bedbe11e
+      internalID: -1513403220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_76
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 392
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f17c73ebd7e264fbbaf0e601f13bbb
+      internalID: 292059071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_77
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 392
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08dbf4d0e45a7914c9fd7c0a0cc2e2bc
+      internalID: -1453102046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_78
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 392
+        width: 10
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7c966f665ba8c47ac144fa1f2bf3f1
+      internalID: 815303744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_79
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 392
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0df4069f660a2438f4d978c464f61d
+      internalID: -153427382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_80
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 392
+        width: 10
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61be1636b3f6784b9eb3f385eeab5ae
+      internalID: -1629003801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_81
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 146
+        width: 50
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e815a39e1742b1479d0e0de30d25437
+      internalID: -1336937288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_82
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 144
+        width: 51
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8731dd436e0824889d41b03ef938bd
+      internalID: 1731130634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_83
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 152
+        width: 52
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf8b225caa55ce43a5e295d90cfcb63
+      internalID: 576994528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_84
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 146
+        width: 51
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674a7563bc4ee1145b328f1a7f7cadac
+      internalID: 920968259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_85
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 144
+        width: 51
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1248da2a07bdcf74898926d5ce389056
+      internalID: -2086752703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_86
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 152
+        width: 52
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a4131986c35444ea82ca602189ec2b
+      internalID: 1137793926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_87
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 187
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dcbfd956575dbf4daaba6cd9984b999
+      internalID: 1995945831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_88
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 187
+        width: 10
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af77b91d620276e42990b4ea42485eea
+      internalID: 42674234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_89
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 187
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c4ebe7ef239934181532ed7391c53f
+      internalID: 1488030691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_90
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 187
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108569bfb491c284e8780a0de0d56bc5
+      internalID: -494397554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_91
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 187
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aef9ea284f4a7846ab27ddad27689df
+      internalID: -1714351761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_92
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 187
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff2cb90d97394cf42871c2197d22785f
+      internalID: 1869869271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_93
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 187
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7afcfbd971ed0c4ea37663c4caa9b19
+      internalID: 871656157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_94
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 187
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df4c3dc311e2c64685c9eb8bc550870
+      internalID: 1737063326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_95
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 9
+        width: 51
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd081b6f13d93e94d80843a94458c484
+      internalID: -1625109275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bedevi (1)_96
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 9
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d6d2a7f058f524ea4c9fd875164612
+      internalID: 1147514664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bedevi (1)_0: 1761755990
+      bedevi (1)_1: 387195625
+      bedevi (1)_10: 821036649
+      bedevi (1)_11: 1692832579
+      bedevi (1)_12: -1372067331
+      bedevi (1)_13: -1157845290
+      bedevi (1)_14: -1231625944
+      bedevi (1)_15: -2048554064
+      bedevi (1)_16: -702595718
+      bedevi (1)_17: -2130688295
+      bedevi (1)_18: -773899165
+      bedevi (1)_19: -1073142203
+      bedevi (1)_2: -2068204349
+      bedevi (1)_20: -447137662
+      bedevi (1)_21: -509413571
+      bedevi (1)_22: -1817022622
+      bedevi (1)_23: -2073997012
+      bedevi (1)_24: -1342199039
+      bedevi (1)_25: 1242558505
+      bedevi (1)_26: -56098533
+      bedevi (1)_27: -196652965
+      bedevi (1)_28: -1456241911
+      bedevi (1)_29: -1166680171
+      bedevi (1)_3: -1140067181
+      bedevi (1)_30: 1413938873
+      bedevi (1)_31: 662278098
+      bedevi (1)_32: 1226244136
+      bedevi (1)_33: -391036253
+      bedevi (1)_34: -1787845164
+      bedevi (1)_35: -386365709
+      bedevi (1)_36: 1499505069
+      bedevi (1)_37: -769625533
+      bedevi (1)_38: -2120558153
+      bedevi (1)_39: 287401772
+      bedevi (1)_4: 69572424
+      bedevi (1)_40: -45884657
+      bedevi (1)_41: -2094609245
+      bedevi (1)_42: -1558829934
+      bedevi (1)_43: -2021243244
+      bedevi (1)_44: -1332929769
+      bedevi (1)_45: 253956277
+      bedevi (1)_46: -463490022
+      bedevi (1)_47: -758833082
+      bedevi (1)_48: 139101392
+      bedevi (1)_49: -1488964385
+      bedevi (1)_5: -523089686
+      bedevi (1)_50: -1054689051
+      bedevi (1)_51: -1373805374
+      bedevi (1)_52: -505250180
+      bedevi (1)_53: 169387119
+      bedevi (1)_54: 1682723776
+      bedevi (1)_55: -1306109210
+      bedevi (1)_56: -287284302
+      bedevi (1)_57: 233517645
+      bedevi (1)_58: 648178329
+      bedevi (1)_59: -1339281629
+      bedevi (1)_6: 421174959
+      bedevi (1)_60: 1845841067
+      bedevi (1)_61: -1362725398
+      bedevi (1)_62: -240401100
+      bedevi (1)_63: -57114311
+      bedevi (1)_64: 825122019
+      bedevi (1)_65: -118749500
+      bedevi (1)_66: -768961767
+      bedevi (1)_67: 1265166801
+      bedevi (1)_68: 372295165
+      bedevi (1)_69: 1766849154
+      bedevi (1)_7: -802722868
+      bedevi (1)_70: -785001766
+      bedevi (1)_71: -182659495
+      bedevi (1)_72: 694999246
+      bedevi (1)_73: -2131880072
+      bedevi (1)_74: 1079175619
+      bedevi (1)_75: -1513403220
+      bedevi (1)_76: 292059071
+      bedevi (1)_77: -1453102046
+      bedevi (1)_78: 815303744
+      bedevi (1)_79: -153427382
+      bedevi (1)_8: -1445683494
+      bedevi (1)_80: -1629003801
+      bedevi (1)_81: -1336937288
+      bedevi (1)_82: 1731130634
+      bedevi (1)_83: 576994528
+      bedevi (1)_84: 920968259
+      bedevi (1)_85: -2086752703
+      bedevi (1)_86: 1137793926
+      bedevi (1)_87: 1995945831
+      bedevi (1)_88: 42674234
+      bedevi (1)_89: 1488030691
+      bedevi (1)_9: -1369926101
+      bedevi (1)_90: -494397554
+      bedevi (1)_91: -1714351761
+      bedevi (1)_92: 1869869271
+      bedevi (1)_93: 871656157
+      bedevi (1)_94: 1737063326
+      bedevi (1)_95: -1625109275
+      bedevi (1)_96: 1147514664
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

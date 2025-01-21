@@ -1,22 +1,68 @@
 using UnityEngine;
-using System.Collections; // Gerekli ad alaný eklendi
 
 public class Enemy : MonoBehaviour
 {
-    public int health = 50;
+    public float attackRange = 1.5f;
+    public float chaseRange = 3f;
+    public int attackDamage = 10;
+    public float attackCooldown = 1.5f;
+    public float moveSpeed = 2f;
+    public float knockbackForce = 5f;
+    public Transform attackPoint;
+    public string playerTag = "Player";
+    public Animator animator;
 
-    public void TakeDamage(int damage)
+    [HideInInspector] public bool canAttack = true;
+
+    private Transform player;
+    private IEnemyState currentState;
+    public readonly IdleState idleState = new IdleState();
+    public readonly ChaseState chaseState = new ChaseState();
+    public readonly AttackState attackState = new AttackState();
+
+    private Rigidbody2D rb;
+
+    private void Awake()
     {
-        health -= damage;
+        animator = GetComponentInChildren<Animator>();
+        player = GameObject.FindWithTag(playerTag)?.transform;
+        rb = GetComponent<Rigidbody2D>();
 
-        if (health <= 0)
-        {
-            Die();
-        }
+        if (animator == null) Debug.LogError("Animator bulunamadý.");
+        if (player == null) Debug.LogError("Player bulunamadý.");
+        if (attackPoint == null) Debug.LogError("AttackPoint referansý atanmadý.");
+        if (rb == null) Debug.LogError("Rigidbody2D bulunamadý.");
+
+        TransitionToState(idleState);
     }
 
-    private void Die()
+    private void Update()
     {
-        Destroy(gameObject);
+        currentState.UpdateState(this);
+    }
+
+    public void TransitionToState(IEnemyState newState)
+    {
+        currentState?.ExitState(this);
+        currentState = newState;
+        currentState.EnterState(this);
+    }
+
+    public float DistanceToPlayer()
+    {
+        return Vector2.Distance(transform.position, player.position);
+    }
+
+    public void ChasePlayer()
+    {
+        if (DistanceToPlayer() > attackRange)
+        {
+            Vector2 direction = (player.position - transform.position).normalized;
+            rb.velocity = direction * moveSpeed;
+        }
+        else
+        {
+            rb.velocity = Vector2.zero; // Saldýrý menziline girdiyse durdur
+        }
     }
 }

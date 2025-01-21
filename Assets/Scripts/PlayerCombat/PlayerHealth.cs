@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -15,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log("Player Health: " + currentHealth);
+        Debug.Log("Player has taken damage! Current Health: " + currentHealth);
 
         if (currentHealth <= 0)
         {
@@ -25,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Player is Dead.");
+        Debug.Log("Player has died!");
+        // Ölüm iþlemleri burada gerçekleþtirilir
     }
 }
-
