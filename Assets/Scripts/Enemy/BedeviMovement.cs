@@ -3,68 +3,110 @@ using UnityEngine;
 public class BedeviMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public Transform[] patrolPoints; // Devriye noktalarý
-    public float moveSpeed = 2f; // Bedevi'nin yürüme hýzý
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float knockbackForce = 5f;
+    [SerializeField] private float knockbackDuration = 0.2f;
+    [SerializeField] private int attackDamage = 10;
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private float attackRange = 1.5f;
 
-    private int currentPointIndex = 0;
+    private Rigidbody2D rb;
     private Animator animator;
-    private Transform player;
-    private EnemyCombat enemyCombat; // EnemyCombat bileþenine referans
+    private SpriteRenderer spriteRenderer;
+    private Enemy enemy;
+
+    private bool isKnockedBack = false;
+    private float knockbackTimer = 0f;
     private bool facingRight = true;
 
     private void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
-        player = GameObject.FindWithTag("Player").transform;
-        enemyCombat = GetComponent<EnemyCombat>(); // EnemyCombat bileþenini al
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        enemy = GetComponent<Enemy>();
+
+        if (animator == null)
+        {
+            Debug.LogError("Animator bileþeni atanmadý! Lütfen bir Animator bileþeni ekleyin.");
+        }
+
+        if (spriteRenderer == null)
+        {
+            Debug.LogError("SpriteRenderer bileþeni atanmadý! Lütfen bir SpriteRenderer bileþeni ekleyin.");
+        }
+
+        if (enemy == null)
+        {
+            Debug.LogError("Enemy bileþeni atanmadý! Lütfen bir Enemy bileþeni ekleyin.");
+        }
     }
 
     private void Update()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-
-        if (distanceToPlayer > enemyCombat.attackRange * 2) // Oyuncu uzaktaysa devriye at
+        if (isKnockedBack)
         {
-            Patrol();
+            knockbackTimer -= Time.deltaTime;
+            if (knockbackTimer <= 0f)
+            {
+                isKnockedBack = false;
+                rb.velocity = Vector2.zero; // Knockback süresi bitince hýz sýfýrlanýr
+                enemy.TransitionToState(enemy.idleState); // Knockback bittiðinde duruma dön
+            }
         }
-        else if (distanceToPlayer <= enemyCombat.attackRange * 2) // Oyuncu yakýnsa onu kovalama
+        else if (enemy.currentState == enemy.chaseState)
         {
-            ChasePlayer();
+            MoveTowardsTarget();
         }
-
-        Flip();
     }
 
-    private void Patrol()
+    private void MoveTowardsTarget()
     {
-        if (patrolPoints.Length == 0) return;
-
-        transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, moveSpeed * Time.deltaTime);
-
-        if (Vector2.Distance(transform.position, patrolPoints[currentPointIndex].position) < 0.1f)
+        if (enemy.player != null)
         {
-            currentPointIndex = (currentPointIndex + 1) % patrolPoints.Length;
+            Vector2 direction = (enemy.player.position - transform.position).normalized;
+            rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
+
+            animator.SetBool("BedeviWalking", true);
+            animator.SetBool("BedeviIdle", false);
+            if (direction.x > 0 && !facingRight)
+            {
+                Flip();
+            }
+            else if (direction.x < 0 && facingRight)
+            {
+                Flip();
+            }
         }
-
-        animator.SetBool("BedeviWalking", true);
-        animator.SetBool("BedeviMeleeCombat", false);
-    }
-
-    private void ChasePlayer()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-        animator.SetBool("BedeviWalking", true);
-        animator.SetBool("BedeviMeleeCombat", false);
     }
 
     private void Flip()
     {
-        if (player.position.x > transform.position.x && !facingRight || player.position.x < transform.position.x && facingRight)
+        facingRight = !facingRight;
+        spriteRenderer.flipX = !facingRight;
+    }
+
+    public void ApplyKnockback(Vector2 direction)
+    {
+        if (!isKnockedBack)
         {
-            facingRight = !facingRight;
-            Vector3 scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
+            isKnockedBack = true;
+            knockbackTimer = knockbackDuration;
+
+            rb.velocity = direction * knockbackForce;
+
+            enemy.TransitionToState(enemy.idleState); // Knockback state'ine geç
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+            ApplyKnockback(knockbackDirection);
+
+            collision.gameObject.GetComponent<PlayerHealth>()?.TakeDamage(attackDamage);
         }
     }
 }

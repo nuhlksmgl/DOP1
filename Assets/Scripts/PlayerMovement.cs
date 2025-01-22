@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ladder Settings")]
     [SerializeField] private float climbSpeed = 8f;
 
+    [Header("Camera Follow Settings")]
+    [SerializeField] private CameraFollow cameraFollow;
+
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -28,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontalInput;
     private float verticalInput;
-    private float dashTime;
     private float currentSpeed;
 
     private void Awake()
@@ -41,6 +43,11 @@ public class PlayerMovement : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         currentSpeed = moveSpeed;
+
+        if (cameraFollow == null)
+        {
+            Debug.LogError("CameraFollow scripti atanmadý! Lütfen CameraFollow scriptini atayýn.");
+        }
     }
 
     private void Update()
@@ -125,12 +132,14 @@ public class PlayerMovement : MonoBehaviour
     {
         isDashing = true;
         canDash = false;
-        dashTime = dashDuration;
 
-        rb.velocity = new Vector2(horizontalInput * dashSpeed, 0f);
+        rb.velocity = new Vector2(horizontalInput * dashSpeed, rb.velocity.y); // Dash sýrasýnda yatay hýz ayarlanýr
 
         animator.SetBool("isDashing", true); // Dash animasyonunu tetikleme
         Debug.Log("Dash animasyonu baþlatýldý.");
+
+        // Kamera hýzýný artýr
+        cameraFollow.SetDashSpeed();
 
         Invoke(nameof(EndDash), dashDuration);
     }
@@ -140,6 +149,9 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         animator.SetBool("isDashing", false); // Dash animasyonunu durdurma
         Debug.Log("Dash animasyonu durduruldu.");
+
+        // Kamera hýzýný normale döndür
+        cameraFollow.ResetSpeed();
 
         Invoke(nameof(ResetDashCooldown), dashCooldown);
     }

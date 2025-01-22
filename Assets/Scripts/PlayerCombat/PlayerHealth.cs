@@ -1,19 +1,25 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 100;
+    [SerializeField] private int maxHealth = 100;
     private int currentHealth;
+    public GameObject deathPanel;
 
-    private void Awake()
+    private void Start()
     {
         currentHealth = maxHealth;
+        if (deathPanel != null)
+        {
+            deathPanel.SetActive(false); // Baþlangýçta kapalý
+        }
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log("Player has taken damage! Current Health: " + currentHealth);
+        Debug.Log("Player health: " + currentHealth);
 
         if (currentHealth <= 0)
         {
@@ -23,7 +29,15 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Player has died!");
-        // Ölüm iþlemleri burada gerçekleþtirilir
+        Debug.Log("Player died.");
+        if (deathPanel != null)
+        {
+            deathPanel.SetActive(true); // Player öldüðünde panel açýlýr
+        }
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Sahneyi yeniden yükle
     }
 }

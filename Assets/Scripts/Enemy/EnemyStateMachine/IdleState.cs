@@ -15,6 +15,10 @@ public class IdleState : IEnemyState
         {
             enemy.TransitionToState(enemy.chaseState);
         }
+        else
+        {
+            enemy.Patrol(); // Idle state'teyken devriye gezme
+        }
     }
 
     public void ExitState(Enemy enemy)

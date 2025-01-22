@@ -18,7 +18,7 @@ public class AttackState : IEnemyState
 
         enemy.animator.SetTrigger("BedeviMeleeCombat");
         enemy.canAttack = false;
-        enemy.Invoke(nameof(ResetAttack), enemy.attackCooldown);
+        enemy.Invoke(nameof(enemy.ResetAttack), enemy.attackCooldown);
     }
 
     public void UpdateState(Enemy enemy)
@@ -30,12 +30,6 @@ public class AttackState : IEnemyState
     }
 
     public void ExitState(Enemy enemy) { }
-
-    private void ResetAttack(Enemy enemy)
-    {
-        enemy.canAttack = true;
-        enemy.animator.ResetTrigger("BedeviMeleeCombat");
-    }
 
     private void Knockback(Transform player, Enemy enemy)
     {
