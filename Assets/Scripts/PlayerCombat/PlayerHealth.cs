@@ -34,10 +34,12 @@ public class PlayerHealth : MonoBehaviour
         {
             deathPanel.SetActive(true); // Player öldüðünde panel açýlýr
         }
+        Time.timeScale = 0f; // Oyun durdurulur
     }
 
     public void RestartGame()
     {
+        Time.timeScale = 1f; // Oyun hýzý normale döner
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Sahneyi yeniden yükle
     }
 }

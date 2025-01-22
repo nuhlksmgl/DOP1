@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
 
         Transform targetPatrolPoint = patrolPoints[currentPatrolIndex];
         Vector2 direction = (targetPatrolPoint.position - transform.position).normalized;
-        rb.velocity = direction * moveSpeed;
+        rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
 
         if (Vector2.Distance(transform.position, targetPatrolPoint.position) < 0.1f)
         {

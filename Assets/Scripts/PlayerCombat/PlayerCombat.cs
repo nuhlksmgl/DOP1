@@ -39,7 +39,8 @@ public class PlayerCombat : MonoBehaviour
             if (enemy.CompareTag(enemyTag))
             {
                 Debug.Log("Player düþmana vurdu!");
-                enemy.GetComponent<EnemyHealth>()?.TakeDamage(attackDamage);
+                enemy.GetComponent<ArcherBedeviHealth>()?.TakeDamage(attackDamage); // ArcherBedevi'ye hasar verme
+                enemy.GetComponent<EnemyHealth>()?.TakeDamage(attackDamage); // Diðer düþmanlara hasar verme
                 Knockback(enemy.transform);
             }
         }
