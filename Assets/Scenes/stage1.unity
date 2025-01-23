@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  healthBarImage: {fileID: 0}
+  healthBarImage: {fileID: 1032624979}
 --- !u!114 &96501782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +363,22 @@ MonoBehaviour:
   hamburgerText: {fileID: 1193155423}
   inventoryUI: {fileID: 2114400624}
   toggleKey: 101
+--- !u!114 &96501807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96501780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d05c7c2f4d4a0649b335096cab424b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHunger: 100
+  hungerDecayInterval: 0.48
+  hungerDecayAmount: 1
+  hungerBarImage: {fileID: 409251127}
 --- !u!1 &120559207
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,6 +991,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1661366006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &409251125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 409251126}
+  - component: {fileID: 409251128}
+  - component: {fileID: 409251127}
+  m_Layer: 5
+  m_Name: HungerBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &409251126
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409251125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1564178297}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 126, y: -107.4}
+  m_SizeDelta: {x: 252, y: 64}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &409251127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409251125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 77151969d00341a49bb16a3e2044938c, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &409251128
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409251125}
+  m_CullTransparentMesh: 1
 --- !u!1001 &418633671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1165,6 +1256,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8092183339157107266, guid: d6f864df1c637c245b0625fbf962238c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 96501799}
+    - targetCorrespondingSourceObject: {fileID: 8092183339157107266, guid: d6f864df1c637c245b0625fbf962238c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 96501807}
   m_SourcePrefab: {fileID: 100100000, guid: d6f864df1c637c245b0625fbf962238c, type: 3}
 --- !u!1 &440736161
 GameObject:
@@ -1907,7 +2001,7 @@ GameObject:
   - component: {fileID: 1032624978}
   - component: {fileID: 1032624979}
   m_Layer: 5
-  m_Name: Image
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3333,6 +3427,7 @@ RectTransform:
   - {fileID: 2114400625}
   - {fileID: 1233112449}
   - {fileID: 1032624977}
+  - {fileID: 409251126}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
