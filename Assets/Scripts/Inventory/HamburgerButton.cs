@@ -13,8 +13,7 @@ public class HamburgerButton : MonoBehaviour
 
     private void UseHamburger()
     {
-        // Hamburger kullanýmý için gerekli kodlar
-        // Örneðin, Player'ýn enerjisini arttýrabilir
+        FindObjectOfType<PlayerHunger>().IncreaseHunger(30);
         inventory.RemoveItem("Hamburger");
     }
 }

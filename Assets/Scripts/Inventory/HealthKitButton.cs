@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthKitButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Inventory inventory;
+
+    private void Start()
     {
-        
+        inventory = FindObjectOfType<Inventory>();
+        GetComponent<Button>().onClick.AddListener(UseHealthKit);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void UseHealthKit()
     {
-        
+        FindObjectOfType<PlayerHealth>().Heal(50);
+        inventory.RemoveItem("HealthKit");
     }
 }
