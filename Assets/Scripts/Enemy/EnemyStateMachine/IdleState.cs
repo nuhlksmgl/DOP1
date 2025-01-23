@@ -4,9 +4,8 @@ public class IdleState : IEnemyState
 {
     public void EnterState(Enemy enemy)
     {
-        enemy.animator.SetBool("BedeviIdle", true);
         enemy.animator.SetBool("BedeviWalking", false);
-        enemy.animator.ResetTrigger("BedeviMeleeCombat");
+        enemy.animator.SetBool("BedeviIdle", true);
     }
 
     public void UpdateState(Enemy enemy)
@@ -17,12 +16,9 @@ public class IdleState : IEnemyState
         }
         else
         {
-            enemy.Patrol(); // Idle state'teyken devriye gezme
+            enemy.Patrol();
         }
     }
 
-    public void ExitState(Enemy enemy)
-    {
-        enemy.animator.SetBool("BedeviIdle", false);
-    }
+    public void ExitState(Enemy enemy) { }
 }
