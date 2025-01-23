@@ -4,7 +4,7 @@ public class AttackState : IEnemyState
 {
     public void EnterState(Enemy enemy)
     {
-        // Saldýrý iþlemlerini burada gerçekleþtirelim
+        // Saldýrý iþlemleri
         Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(enemy.attackPoint.position, enemy.attackRange);
         foreach (Collider2D player in hitPlayers)
         {

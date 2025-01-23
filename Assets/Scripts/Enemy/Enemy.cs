@@ -8,17 +8,19 @@ public class Enemy : MonoBehaviour
     public float attackCooldown = 1.5f;
     public float moveSpeed = 2f;
     public float knockbackForce = 5f;
+
     public Transform attackPoint;
     public string playerTag = "Player";
     public Animator animator;
-    public Transform[] patrolPoints; // Patrol noktalarý eklendi
+    public Transform[] patrolPoints; // Patrol noktalarý
     private int currentPatrolIndex = 0;
-    private bool facingRight = true; // Bu deðiþken eklendi
-    private SpriteRenderer spriteRenderer; // Bu deðiþken eklendi
+    private bool patrolForward = true; // Ping-pong hareketi için eklendi
+    private bool facingRight = true;  // Yüzün yönünü kontrol etmek için
+    private SpriteRenderer spriteRenderer;
 
     [HideInInspector] public bool canAttack = true;
-    public Transform player; // Bu deðiþkeni public yaptýk
-    public IEnemyState currentState; // Bu deðiþkeni public yaptýk
+    public Transform player;
+    public IEnemyState currentState;
 
     public readonly IdleState idleState = new IdleState();
     public readonly ChaseState chaseState = new ChaseState();
@@ -29,7 +31,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>(); // SpriteRenderer atanmasý eklendi
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         player = GameObject.FindWithTag(playerTag)?.transform;
         rb = GetComponent<Rigidbody2D>();
 
@@ -59,31 +61,49 @@ public class Enemy : MonoBehaviour
         return Vector2.Distance(transform.position, player.position);
     }
 
-    public void Patrol()
+ public void Patrol()
+{
+    if (patrolPoints.Length == 0) return; // Eðer patrol noktalarý yoksa hiçbir þey yapma
+
+    // Þu anki hedef patrol noktasýný belirle
+    Transform targetPatrolPoint = patrolPoints[currentPatrolIndex];
+
+    // Hedefe doðru hareket et
+    Vector2 direction = (targetPatrolPoint.position - transform.position).normalized;
+    rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
+
+    // Eðer hedefe yeterince yaklaþýldýysa (örneðin 0.1 birim mesafeden az)
+    if (Vector2.Distance(transform.position, targetPatrolPoint.position) < 0.1f)
     {
-        if (patrolPoints.Length == 0) return;
-
-        Transform targetPatrolPoint = patrolPoints[currentPatrolIndex];
-        Vector2 direction = (targetPatrolPoint.position - transform.position).normalized;
-        rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
-
-        if (Vector2.Distance(transform.position, targetPatrolPoint.position) < 0.1f)
+        // Eðer son noktadaysak geri dön
+        if (currentPatrolIndex == patrolPoints.Length - 1)
         {
-            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
+            patrolForward = false; // Geri gitmeye baþla
+        }
+        else if (currentPatrolIndex == 0)
+        {
+            patrolForward = true; // Ýleri gitmeye baþla
         }
 
-        animator.SetBool("BedeviWalking", true);
-        animator.SetBool("BedeviIdle", false);
-
-        if (direction.x > 0 && !facingRight)
-        {
-            Flip();
-        }
-        else if (direction.x < 0 && facingRight)
-        {
-            Flip();
-        }
+        // Index'i ileri ya da geri güncelle
+        currentPatrolIndex += patrolForward ? 1 : -1;
     }
+
+    // Animasyonlarý kontrol et
+    animator.SetBool("BedeviWalking", true);
+    animator.SetBool("BedeviIdle", false);
+
+    // Sprite'ý doðru yöne çevir
+    if (direction.x > 0 && !facingRight)
+    {
+        Flip();
+    }
+    else if (direction.x < 0 && facingRight)
+    {
+        Flip();
+    }
+}
+
 
     public void ChasePlayer()
     {
@@ -91,13 +111,13 @@ public class Enemy : MonoBehaviour
         {
             Vector2 direction = (player.position - transform.position).normalized;
             rb.velocity = direction * moveSpeed;
-            animator.SetBool("BedeviWalking", true); // Walking animasyonunu tetikleme
-            animator.SetBool("BedeviIdle", false); // Idle animasyonunu durdurma
+            animator.SetBool("BedeviWalking", true);
+            animator.SetBool("BedeviIdle", false);
         }
         else
         {
-            rb.velocity = Vector2.zero; // Saldýrý menziline girdiyse durdur
-            animator.SetBool("BedeviWalking", false); // Walking animasyonunu durdurma
+            rb.velocity = Vector2.zero;
+            animator.SetBool("BedeviWalking", false);
         }
     }
 
